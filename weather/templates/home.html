@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Predictor</title>
+</head>
+<body>
+    <h1>Enter Weather Parameters</h1>
+    <form method="post" action="{% url 'result' %}">
+        {% csrf_token %}
+        <label>Precipitation:</label>
+        <input type="text" name="precipitation" required><br><br>
+
+        <label>Max Temp:</label>
+        <input type="text" name="temp_max" required><br><br>
+
+        <label>Min Temp:</label>
+        <input type="text" name="temp_min" required><br><br>
+
+        <label>Wind:</label>
+        <input type="text" name="wind" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
